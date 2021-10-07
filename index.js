@@ -32,7 +32,13 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+const friedSnake = createMenuItem("Fried Snake", 6, "Dinner");
+const oceanMix = createMenuItem("Ocean mix", 22, "Lunch");
+const bowlOfClovers = createMenuItem("Bowl of Clovers", 7, "Lunch");
 
+console.log(friedSnake);
+console.log(oceanMix);
+console.log(bowlOfClovers);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -51,10 +57,15 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(string) {
+    if(string === "teacher" || string === "student") {
+      return burger.price - 4.5;
+    } else if(string === "public") {
+      return burger.price - 1.8;
+    }
+  }
 }
-
-
+console.log(burger.discount("public"));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -110,9 +121,10 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, index) {
+  return `${array[index].name} has given the restaurant a ${array[index].rating} star review and their feedback was: ${array[index].feedback}`;
 }
+
 
 
   
