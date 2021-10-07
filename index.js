@@ -59,9 +59,9 @@ const burger = {
   category: "Lunch", 
   discount: function(string) {
     if(string === "teacher" || string === "student") {
-      return burger.price - 4.5;
+      return burger.price - (burger.price * .25);
     } else if(string === "public") {
-      return burger.price - 1.8;
+      return burger.price - (burger.price * .10);
     }
   }
 }
